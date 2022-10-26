@@ -63,7 +63,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_k
                 echo Nav::widget([
                     //'options' => ['class' => 'navbar-nav'],
                     'items' => [
-                        ['label' => 'Home', 'url' => [Yii::$app->homeUrl]],
+                        ['label' => 'Home', 'url' => ['/site/index']],
                         ['label' => 'About', 'url' => ['/site/about']],
                         ['label' => 'Contact', 'url' => ['/site/contact']],
                         //['label' => 'Signup', 'url' => ['/site/signup']],
