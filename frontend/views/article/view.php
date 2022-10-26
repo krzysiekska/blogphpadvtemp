@@ -12,8 +12,11 @@ $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="article-view">
-
-    <h1><?= Html::encode($this->title) ?></h1>
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="site-login">
+    <h1 style="text-align: center"><?= Html::encode($this->title) ?></h1>
+                <div class="col-lg-8 col-xl-7">
     <p class="text-muted">
         <small>
             Created At: <b><?php echo Yii::$app->formatter->asDatetime($model->created_at); //asRelativeTime ile czasu temu ?></b>
@@ -35,5 +38,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <div>
         <?php echo $model->getEncodeBody(); ?>
     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </div>

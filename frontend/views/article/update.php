@@ -11,11 +11,18 @@ $this->params['breadcrumbs'][] = ['label' => $model->title, 'url' => ['view', 's
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="article-update">
-
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="site-login">
     <h1><?= Html::encode($this->title) ?></h1>
+                <div class="col-lg-8 col-xl-7">
 
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </div>

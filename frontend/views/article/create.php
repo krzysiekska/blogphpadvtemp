@@ -10,11 +10,18 @@ $this->params['breadcrumbs'][] = ['label' => 'Articles', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="article-create">
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="site-login">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
+    <h1 style="text-align: center"><?= Html::encode($this->title) ?></h1>
+                <div class="col-lg-8 col-xl-7">
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </div>

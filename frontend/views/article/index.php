@@ -14,22 +14,28 @@ $this->title = 'Articles';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="article-index">
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="site-login">
+                <h1 style="text-align: center"><?= Html::encode($this->title) ?></h1>
+                <div class="col-lg-8 col-xl-7">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+                    <?php if (!Yii::$app->user->isGuest): ?>
+                        <p>
+                            <?= Html::a('Create Article', ['create'], ['class' => 'btn btn-success']) ?>
+                        </p>
+                    <?php endif; ?>
 
-   <?php if(!Yii::$app->user->isGuest): ?>
-    <p>
-        <?= Html::a('Create Article', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-    <?php endif; ?>
+                    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <?= \yii\widgets\ListView::widget([
-        'dataProvider' => $dataProvider,
-    //    'filterModel' => $searchModel,
-        'itemView' => '_article_item'
-    ]); ?>
-
+                    <?= \yii\widgets\ListView::widget([
+                        'dataProvider' => $dataProvider,
+                        //    'filterModel' => $searchModel,
+                        'itemView' => '_article_item'
+                    ]); ?>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </div>

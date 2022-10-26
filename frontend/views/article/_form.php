@@ -9,7 +9,10 @@ use yii\widgets\ActiveForm;
 ?>
 
 <div class="article-form">
-
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="site-login">
+                <div class="col-lg-8 col-xl-7">
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
@@ -23,5 +26,8 @@ use yii\widgets\ActiveForm;
     </div>
 
     <?php ActiveForm::end(); ?>
-
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
